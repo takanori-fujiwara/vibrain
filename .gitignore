@@ -1,0 +1,11 @@
+.DS_Store
+*-Debug/
+*-Release/
+*-Profile/
+*.pro.user
+*build/
+src/qt/R.framework/Versions/3.3/Resources/library/*
+*vibrain.app
+*~$*
+*.autosave
+vibrain
