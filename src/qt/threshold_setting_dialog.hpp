@@ -1,42 +1,42 @@
 #ifndef THRESHOLDSETTINGDIALOG_H
 #define THRESHOLDSETTINGDIALOG_H
 
+#include <QComboBox>
 #include <QDialog>
-#include <QWidget>
-#include <QListWidget>
 #include <QHBoxLayout>
-#include <QVBoxLayout>
 #include <QLabel>
 #include <QLineEdit>
-#include <QComboBox>
+#include <QListWidget>
+#include <QPalette>
 #include <QPushButton>
 #include <QSpacerItem>
-#include <QPalette>
+#include <QVBoxLayout>
+#include <QWidget>
 
 #include "detailed_matrix.hpp"
 
-class ThresholdSettingDialog : public QDialog
-{
-    Q_OBJECT
+class ThresholdSettingDialog : public QDialog {
+  Q_OBJECT
 public:
-    explicit ThresholdSettingDialog(DetailedMatrix *detailedMatrix, QWidget *parent = 0);
-    ~ThresholdSettingDialog();
+  explicit ThresholdSettingDialog(DetailedMatrix *detailedMatrix,
+                                  QWidget *parent = 0);
+  ~ThresholdSettingDialog();
 
 private:
-    DetailedMatrix *detailedMatrix;
-    QLineEdit *thresMinLineEdit;
-    QLineEdit *lowerThresLineEdit;
-    QLineEdit *upperThresLineEdit;
-    QLineEdit *thresMaxLineEdit;
-    QComboBox *rangeComboBox;
-    QLabel *errorMsgLabel;
+  DetailedMatrix *detailedMatrix;
+  QLineEdit *thresMinLineEdit;
+  QLineEdit *lowerThresLineEdit;
+  QLineEdit *upperThresLineEdit;
+  QLineEdit *thresMaxLineEdit;
+  QComboBox *rangeComboBox;
+  QLabel *errorMsgLabel;
 
 private slots:
-    void handleCancelBtn();
-    void handleOkBtn();
+  void handleCancelBtn();
+  void handleOkBtn();
 
 signals:
-    void thresholdsChanged();
+  void thresholdsChanged();
 };
 
 #endif // THRESHOLDSETTINGDIALOG_H

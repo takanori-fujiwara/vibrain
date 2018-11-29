@@ -27,10 +27,18 @@ if [ "$UNAME" = "Darwin" ] ; then
     export PATH=/user/local/bin/:$PATH
 
     # install Homebrew
-    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    echo "Checking brew command."
+    if ! [ -x "$(command -v brew)" ]; then
+        echo "brew is not installed. Starting to install brew now...\n"
+        /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    else
+        echo "brew is available.\n"
+    fi
+
     # brew tap homebrew/science
 
     # install qt5
+    echo "Installing necessary packages (qt and R) via brew.\n"
     brew install qt5
     brew link --force --overwrite qt5
 
@@ -44,14 +52,14 @@ if [ "$UNAME" = "Darwin" ] ; then
     brew install R
     brew link --force --overwrite R
     # install required package
+    echo "Installing RInside from R.\n"
     R -e 'if (!require(RInside)) { install.packages("RInside", repos="http://cran.us.r-project.org") }'
 
     # make
+    echo "Bulding vibrain\n"
     make clean
     rm vibrain.pro.user
     qmake vibrain.pro -spec macx-clang CONFIG+=x86_64
-    qmake
-    make qmake_all
     make
 
     # move and open software
@@ -63,20 +71,24 @@ if [ "$UNAME" = "Darwin" ] ; then
 
 elif [ "$UNAME" = "Linux" ] ; then
     # install qt5
+    echo "Installing qt5"
     sudo apt-get update
     sudo apt-get install qt5-default build-essential libgl1-mesa-dev -y
     #sudo apt-get install qtcreator
 
     # install R
+    echo "Installing R\n"
     sudo apt-get install r-base -y
     sudo chmod o+w /usr/local/lib/R/site-library
     sudo R -e 'if (!require(RInside)) { install.packages("RInside", repos="http://cran.us.r-project.org") }'
 
     # install GLUT
+    echo "Installing GLUT\n"
     sudo apt-get install freeglut3 freeglut3-dev -y
     sudo apt-get install binutils-gold -y
 
     # make
+    echo "Bulding vibrain\n"
     make clean
     qmake vibrain.pro -r -spec linux-g++-64
     make

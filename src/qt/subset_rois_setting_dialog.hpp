@@ -2,38 +2,37 @@
 #define SUBSETROISSETTINGDIALOG_H
 
 #include <QDialog>
-#include <QWidget>
-#include <QListWidget>
 #include <QHBoxLayout>
-#include <QVBoxLayout>
 #include <QLabel>
+#include <QListWidget>
 #include <QPushButton>
 #include <QSpacerItem>
+#include <QVBoxLayout>
+#include <QWidget>
 
 #include "rois.hpp"
 
-class SubsetRoisSettingDialog : public QDialog
-{
-    Q_OBJECT
+class SubsetRoisSettingDialog : public QDialog {
+  Q_OBJECT
 public:
-    explicit SubsetRoisSettingDialog(Rois *rois, QWidget *parent = 0);
-    ~SubsetRoisSettingDialog();
+  explicit SubsetRoisSettingDialog(Rois *rois, QWidget *parent = 0);
+  ~SubsetRoisSettingDialog();
 
 private:
-    Rois *rois;
-    QListWidget *inRangeSubsetList;
-    QListWidget *outOfRangeSubsetList;
+  Rois *rois;
+  QListWidget *inRangeSubsetList;
+  QListWidget *outOfRangeSubsetList;
 
-    void initSubsetLists();
+  void initSubsetLists();
 
 private slots:
-    void handleToOutOfRangeSubsetBtn();
-    void handleToInRangeSubsetBtn();
-    void handleCancelBtn();
-    void handleOkBtn();
+  void handleToOutOfRangeSubsetBtn();
+  void handleToInRangeSubsetBtn();
+  void handleCancelBtn();
+  void handleOkBtn();
 
 signals:
-    void roisOrderChanged();
+  void roisOrderChanged();
 };
 
 #endif // SUBSETROISSETTINGDIALOG_H

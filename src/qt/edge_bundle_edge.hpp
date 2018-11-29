@@ -5,24 +5,23 @@
 /// original source: https://github.com/NeuroanatomyAndConnectivity/brainbundler
 ///
 
+#include <QDebug>
 #include <QList>
 #include <QVector3D>
-#include <QDebug>
 
-class EdgeBundleEdge
-{
+class EdgeBundleEdge {
 public:
-    EdgeBundleEdge(QVector3D fn, QVector3D tn);
-    QVector3D fn, tn;
-    QList<QVector3D> points;
-    QList<QVector3D> forces;
+  EdgeBundleEdge(QVector3D fn, QVector3D tn);
+  QVector3D fn, tn;
+  QList<QVector3D> points;
+  QList<QVector3D> forces;
 
-    void subdivide(int newp);
-    void attract();
-    void applyForces();
-    bool flip(EdgeBundleEdge* other);
-    double length();
-    double segLength(int n);
+  void subdivide(int newp);
+  void attract();
+  void applyForces();
+  bool flip(EdgeBundleEdge *other);
+  double length();
+  double segLength(int n);
 };
 
 #endif // EDGEBUNDLEEDGE_H

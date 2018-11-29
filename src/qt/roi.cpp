@@ -1,31 +1,29 @@
 #include "roi.hpp"
 
-Roi::Roi()
-{
-    this->name = "";
-    this->x = 0.0;
-    this->y = 0.0;
-    this->z = 0.0;
-    this->group = 0;
-    this->rank = -1;
-    this->visible = true;
-    this->size = 0.01;
-    this->selected = false;
-    this->filteredOut = false;
+Roi::Roi() {
+  this->name = "";
+  this->x = 0.0;
+  this->y = 0.0;
+  this->z = 0.0;
+  this->group = 0;
+  this->rank = -1;
+  this->visible = true;
+  this->size = 0.01;
+  this->selected = false;
+  this->filteredOut = false;
 }
 
-Roi::Roi(QString name, float x, float y, float z, uint group, int rank)
-{
-    this->name = name;
-    this->x = x;
-    this->y = y;
-    this->z = z;
-    this->group = group;
-    this->rank = rank;
-    this->visible = true;
-    this->size = 0.01;
-    this->selected = false;
-    this->filteredOut = false;
+Roi::Roi(QString name, float x, float y, float z, uint group, int rank) {
+  this->name = name;
+  this->x = x;
+  this->y = y;
+  this->z = z;
+  this->group = group;
+  this->rank = rank;
+  this->visible = true;
+  this->size = 0.01;
+  this->selected = false;
+  this->filteredOut = false;
 }
 
 QString Roi::getName() { return name; }
