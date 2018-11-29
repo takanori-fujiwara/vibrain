@@ -57,6 +57,7 @@ if [ "$UNAME" = "Darwin" ] ; then
 
     # make
     echo "Bulding vibrain\n"
+    unset R_HOME # to avoid, warning message from `R RHOME`
     make clean
     rm vibrain.pro.user
     qmake vibrain.pro -spec macx-clang CONFIG+=x86_64
