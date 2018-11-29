@@ -96,7 +96,7 @@ ICON = vibrain.icns
 ## and set set R_HOME accordingly as an environment variable
 RHOME = 		$$system(/usr/local/bin/R RHOME)
 unix:!macx {
-    RHOME = $$system(/usr/lib/R RHOME)
+    RHOME = $$system(/usr/bin/R RHOME)
     LIBS += -lglut -lGLU
 }
 

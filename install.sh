@@ -37,6 +37,9 @@ if [ "$UNAME" = "Darwin" ] ; then
 
     # brew tap homebrew/science
 
+    echo "Updating brew"
+    brew update
+
     # install qt5
     echo "Installing necessary packages (qt and R) via brew.\n"
     brew install qt5
