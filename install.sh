@@ -20,10 +20,10 @@ if [ "$UNAME" = "Darwin" ] ; then
     # done
 
     # prepare permission
-    sudo chown -R $USER:admin /usr/local/
+    # sudo chown -R $USER:admin /usr/local/
     # probably, two lines below are not necessary
-    sudo chown -R $USER:admin /usr/local/bin/
-    sudo chown -R $USER:admin /usr/local/Cellar/
+    # sudo chown -R $USER:admin /usr/local/bin/
+    # sudo chown -R $USER:admin /usr/local/Cellar/
     export PATH=/user/local/bin/:$PATH
 
     # install Homebrew

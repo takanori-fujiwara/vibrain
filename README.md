@@ -31,4 +31,4 @@ Usage
 How to Cite
 -----
 * Please, cite:
-  * Takanori Fujiwara, Jia-Kai Chou, Andrew M. McCullough, Charan Ranganath, and Kwan-Liu Ma, "A Visual Analytics System for Brain Functional Connectivity Comparison across Individuals, Groups, and Time Points". In Proceedings of IEEE Pacific Visualization Symposium (PacificVis), 2017
+  * Takanori Fujiwara, Jia-Kai Chou, Andrew M. McCullough, Charan Ranganath, and Kwan-Liu Ma, "A Visual Analytics System for Brain Functional Connectivity Comparison across Individuals, Groups, and Time Points". In Proceedings of IEEE Pacific Visualization Symposium (PacificVis), pp. 250-259, 2017
