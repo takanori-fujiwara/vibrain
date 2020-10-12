@@ -13,6 +13,7 @@
 #include <QMouseEvent>
 #include <QOpenGLWidget>
 #include <QPainter>
+#include <QPainterPath>
 #include <QPushButton>
 #include <QSpacerItem>
 #include <QVBoxLayout>

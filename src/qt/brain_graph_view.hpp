@@ -7,6 +7,7 @@
 #include <QMouseEvent>
 #include <QOpenGLWidget>
 #include <QPainter>
+#include <QPainterPath>
 #include <QWheelEvent>
 
 #ifdef __APPLE__

@@ -9,6 +9,7 @@
 #include <QMouseEvent>
 #include <QOpenGLWidget>
 #include <QPainter>
+#include <QPainterPath>
 
 #include "community_detection.hpp"
 #include "detailed_matrix.hpp"
