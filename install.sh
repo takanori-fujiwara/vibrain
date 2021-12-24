@@ -63,7 +63,7 @@ if [ "$UNAME" = "Darwin" ] ; then
     unset R_HOME # to avoid, warning message from `R RHOME`
     make clean
     rm vibrain.pro.user
-    qmake vibrain.pro -spec macx-clang CONFIG+=x86_64
+    qmake vibrain.pro -spec macx-clang
     make
 
     # move and open software
