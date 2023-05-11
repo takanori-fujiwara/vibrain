@@ -10,5 +10,5 @@ src/qt/R.framework/Versions/3.3/Resources/library/*
 *.autosave
 vibrain
 *.Rhistory
+*.RData
 *.qmake.stash
-

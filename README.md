@@ -16,11 +16,13 @@ About
 * This project is a work for the paper below.
   * Takanori Fujiwara, Jia-Kai Chou, Andrew M. McCullough, Charan Ranganath, and Kwan-Liu Ma, "A Visual Analytics System for Brain Functional Connectivity Comparison across Individuals, Groups, and Time Points". In Proceedings of IEEE Pacific Visualization Symposium (PacificVis), 2017
 
+* Note: Currently, for macOS, the 3D brain network visualziation part has rendering issues due to macOS's OpenGL support. 
+
 Requirements
 -----
 * See manual.pdf
 
-Installation
+Installation (tested on macOS Ventura and Ubuntu 22.0.4 LTS)
 -----
 * See manual.pdf
 
