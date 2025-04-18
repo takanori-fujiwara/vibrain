@@ -22,7 +22,7 @@ Requirements
 -----
 * See manual.pdf
 
-Installation (tested on macOS Ventura and Ubuntu 22.0.4 LTS)
+Installation (tested on macOS Sequoia and Ubuntu 22.0.4 LTS)
 -----
 * See manual.pdf
 
